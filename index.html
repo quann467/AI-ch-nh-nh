@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>AI Chỉnh Ảnh</title>
+<meta charset="UTF-8">
+<title>AI Chỉnh Ảnh</title>
 </head>
 <body>
-    <h1>AI Chỉnh Ảnh</h1>
 
-    <input type="file" id="image"><br><br>
+<h1>AI Chỉnh Ảnh</h1>
 
-    <input type="text" id="prompt"
-           placeholder="Nhập yêu cầu chỉnh ảnh"><br><br>
+<input type="file" id="image"><br><br>
 
-    <button onclick="editImage()">Chỉnh Ảnh</button>
+<input type="text" id="prompt"
+placeholder="Ví dụ: Đổi nền thành bãi biển"><br><br>
 
-    <p id="status"></p>
+<button onclick="runAI()">Chỉnh Ảnh</button>
 
-    <script>
-    async function editImage() {
-        document.getElementById("status").innerText =
-        "Cần kết nối API AI ở bước tiếp theo";
-    }
-    </script>
+<p id="status"></p>
+
+<script>
+function runAI() {
+    let prompt =
+    document.getElementById("prompt").value;
+
+    document.getElementById("status").innerHTML =
+    "Yêu cầu của bạn: " + prompt +
+    "<br><br>Chưa kết nối AI thật.";
+}
+</script>
+
 </body>
 </html>
