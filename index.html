@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Nguyen AI</title>
+    <meta charset="UTF-8">
+    <title>AI Chỉnh Ảnh</title>
 </head>
 <body>
-  <h1>Nguyen AI</h1>
+    <h1>AI Chỉnh Ảnh</h1>
 
-  <input id="msg" placeholder="Nhập câu hỏi">
-  <button onclick="chat()">Gửi</button>
+    <input type="file" id="image"><br><br>
 
-  <p id="reply"></p>
+    <input type="text" id="prompt"
+           placeholder="Nhập yêu cầu chỉnh ảnh"><br><br>
 
-  <script>
-    function chat() {
-      let text = document.getElementById("msg").value;
+    <button onclick="editImage()">Chỉnh Ảnh</button>
 
-      if (text.includes("xin chào")) {
-        document.getElementById("reply").innerText = "Chào bạn!";
-      } else {
-        document.getElementById("reply").innerText = "Tôi đang học thêm.";
-      }
+    <p id="status"></p>
+
+    <script>
+    async function editImage() {
+        document.getElementById("status").innerText =
+        "Cần kết nối API AI ở bước tiếp theo";
     }
-  </script>
+    </script>
 </body>
 </html>
