@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Nguyen AI</title>
+</head>
+<body>
+  <h1>Nguyen AI</h1>
+
+  <input id="msg" placeholder="Nhập câu hỏi">
+  <button onclick="chat()">Gửi</button>
+
+  <p id="reply"></p>
+
+  <script>
+    function chat() {
+      let text = document.getElementById("msg").value;
+
+      if (text.includes("xin chào")) {
+        document.getElementById("reply").innerText = "Chào bạn!";
+      } else {
+        document.getElementById("reply").innerText = "Tôi đang học thêm.";
+      }
+    }
+  </script>
+</body>
+</html>
